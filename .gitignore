@@ -35,4 +35,4 @@ bower_components/
 .flooignore
 
 #mp3
-.mp3
+*.mp3
