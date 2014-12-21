@@ -7,7 +7,10 @@
    <!--  <embed id="gameMusic" src="gameMusic.mp3" loop="true" autostart="false" class="game-music"> -->
    <a href="#" onclick="document.getElementById('gameMusic').muted = true; return false">mute music</a>
     <audio id="gameMusic" autoplay="autoplay">
-      <!-- <source src="gameMusic.mp3" type="audio/mpeg" /> -->
+      <source class="mainMusic" src="gameMusic.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="powerMusic" autoplay="autoplay">
+      <source class="mainMusic" src="powerMusic.mp3" type="audio/mpeg" />
     </audio>
       <div class="scoreboard">
         <!-- Modify the scoreboard when important events occur in your game! -->

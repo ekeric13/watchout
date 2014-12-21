@@ -4,8 +4,8 @@ var highScoreCount = 0;
 var collisionCount = 0;
 var timerOn = false;
 var radius = 1;
-var playerText = ""
-var audio = d3.select("#gameMusic")
+var playerText = "";
+document.getElementById('powerMusic').muted = true;
 // audio.style("display", "none")
 // console.log(scoreCount)
 
@@ -212,7 +212,10 @@ function powerUp() {
   setTimeout(setRadius, 5000);
   d3.select(".shield").remove()
   d3.select(".shield-text").remove()
-  document.getElementById("gameMusic").pause()
+  // d3.select(".mainMusic").remove()
+  document.getElementById('gameMusic').muted = true;
+  document.getElementById('powerMusic').muted = false;
+  // d3.select("#gameMusic").pause();
   // d3.select(".power-music")
   //     .append("embed id="gameMusic" src="gameMusic.mp3" loop="true" autostart="false">")
 
@@ -228,6 +231,9 @@ var setRadius = function(){
   radius = 1;
   window.clearInterval(clearPlayerText);
   playerText = "";
+  document.getElementById('gameMusic').muted = false;
+  document.getElementById('powerMusic').muted = true;
+
   // pauseVid()
 
   // d3.select(".game-music")
